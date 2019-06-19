@@ -46,6 +46,7 @@
 </div>
 
 <!-- Modal -->
+<div class="col-12 offset-1">
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -70,8 +71,9 @@
   </div>
 </div>
 </div>
+</div>
 
-<div class="col-10 offset-1">
+<div class="col-10 offset-2">
   <h1 class="float-left">Comments</h1>
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
@@ -98,7 +100,8 @@
 
 <br/><br/>
 
-  <!-- Modal -->
+ <!-- Modal -->
+<div class="col-10 offset-1">
 <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -124,7 +127,7 @@
   </div>
 </div>
 
-<div class="col-10 offset-1">
+<div class="col-7 offset-1">
   <h1 class="float-left">Photo</h1>
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
@@ -133,10 +136,12 @@
 </div>
 
 
+<div class="clear"></div>
 
-
+<div class="row">
   <% @place.photos.each do |photo| %>
     <div class="col-12 col-sm-6">
-    <%= image_tag photo.picture.url if @photo.picture? %>
+    <%= image_tag photo.picture.url %>
     <%= photo.caption %>
   <% end %>
+</div>
