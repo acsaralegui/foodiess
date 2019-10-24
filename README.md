@@ -22,7 +22,9 @@ CSS styling is done with Twitter Bootstrap.
 
 Postgresql is used for the database.
 
-![](images/screenshot.jpg)
+
+
+<img src="images/screenshot.jpg">
 
 
 
