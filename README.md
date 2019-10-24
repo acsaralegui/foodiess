@@ -24,7 +24,7 @@ Postgresql is used for the database.
 
 
 
-<img src="assets/images/screenshot.jpg">
+<img src="images/screenshot.jpg">
 
 
 
