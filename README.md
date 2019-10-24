@@ -1,4 +1,4 @@
-#Foodiess
+# Foodiess
 
 
 A Yelp clone that integrates with the Google Maps API and includes features like user 
@@ -6,7 +6,7 @@ comments, star ratings, image uploading, and user authentication.
 
 [link](https://foodiess-saralegui.herokuapp.com)
 
-#Features: 
+# Features: 
 
 Uses the Google Map API.
 
@@ -22,7 +22,7 @@ CSS styling is done with Twitter Bootstrap.
 
 Postgresql is used for the database.
 
-![Screenshot](screenshot.jpg)
+![Screenshot](assets/images/screenshot.jpg)
 
 
 
