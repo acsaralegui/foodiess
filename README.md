@@ -1,14 +1,16 @@
-# README
+#Foodiess
+ Is a Yelp style restaurant application that has reviews
 
-# Foodiess
-A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.
+Features: Uses the Google Map API.
 
-# Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. First you have to set up a coding environment follow the link to install your coding environment https://github.com/university-bootcamp/coding-environment/blob/master/README.md#coding-environment-installation-guide 
-Things you may want to cover:
+Allows users to add restaurants, upload photos, add comments, and rate restaurants using a 5 star rating system.
 
-* Ruby on Rails version
+Image storage and delivery utilizes Amazon's S3 Web Services.
 
+Devise is used for user authentication and sign-in forms.
 
-# Acknowledgments
-University of Arizona coding bootcamp
+Incorporates a simple search feature.
+
+CSS styling is done with Twitter Bootstrap.
+
+Postgresql is used for the database.

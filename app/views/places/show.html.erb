@@ -1,11 +1,11 @@
-<div class="booyah-box col-8 offset-2">
+<div class="booyah-box col-10 offset-1">
     <h1><%= @place.name %></h1>
-  <i><%= @place.address %></i>
-  <br/><br/>
-  <p><%= @place.description %></p>
+    <i><%= @place.address %></i>
+      <br/><br/>
+    <p><%= @place.description %></p>
   
   </head>
-  <body>
+ 
   <div id="map"></div>
 
   <% if @place.latitude.present? && @place.longitude.present? %>
@@ -34,7 +34,55 @@
    <div id="map"></div>
   <% end %>
 
+  <div class="col-11 offset-1">
+    <h2 class="float-left">Comments</h2>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+    Add a comment
+    </button>
+  </div>
   <br />
+
+  <br />
+
+  <div class="row">
+    <% @place.comments.each do |comment| %>
+      <div class="col-10 col-sm-4">
+        <blockquote>
+          <% if comment.humanized_rating.present? %>
+            <b><%= comment.humanized_rating %></b> -
+          <% end %>
+          <%= comment.message %>
+          <small><%= comment.user.email %></small>
+        </blockquote>
+      </div>
+  <% end %>
+  </div>
+  <br />
+  <br />
+  <div class="col-11 offset-1">
+  <h2 class="float-left">Photo</h2>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
+    Add a photo
+  </button>
+  </div>
+
+  <div class="clear"></div>
+
+
+
+    <div class="row">
+      <div class="col-12 col-sm-4">
+        <% @place.photos.each do |photo| %>
+        <%= image_tag photo.picture.url, class: "photo" %>
+          <%= photo.caption %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
@@ -44,8 +92,9 @@
   </div>
 
 
+
   <!-- Modal -->
-  <div class="col-12 offset-1">
+  
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -70,32 +119,16 @@
   </div>
   </div>
   </div>
-  </div>
+  
 
-  <div class="col-10 offset-2">
-  <h1 class="float-left">Comments</h1>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
-  Add a comment
-  </button>
-  </div>
+  
 
   <div class="clear"></div>
 
 
-  <div class="row">
-  <% @place.comments.each do |comment| %>
-    <div class="col-12 col-sm-4">
-      <blockquote>
-        <% if comment.humanized_rating.present? %>
-          <b><%= comment.humanized_rating %></b> -
-        <% end %>
-        <%= comment.message %>
-        <small><%= comment.user.email %></small>
-      </blockquote>
-    </div>
-  <% end %>
-  </div>
+  
+
+
 
   <br/><br/>
 
@@ -126,23 +159,11 @@
   </div>
   </div>
 
-  <div class="col-7 offset-1">
-  <h1 class="float-left">Photo</h1>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
-    Add a photo
-  </button>
-  </div>
-</div>
+  
 
 
-<div class="clear"></div>
 
-  <div class="row">
-    <% @place.photos.each do |photo| %>
-    <div class="col-12 col-sm-4">
-        <%= image_tag photo.picture.url, class: "photo" %>
-        <%= photo.caption %>
-   <% end %>
-  </div>
-</div>
+
+  <div class="clear"></div>
+
+   

@@ -78,11 +78,11 @@ img.photo-place {
 }
 
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
-  max-height: 350px;
+  max-height: 950px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 100%;
 }
 
 .carousel-item.active, 
@@ -112,5 +112,5 @@ img.photo-place {
 
 img.photo{
   width: 400px;
-  height: 400px;
+  height: 300px;
 }
