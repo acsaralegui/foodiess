@@ -65,8 +65,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jquery-rails'
 
-gem 'popper_js'
-gem "bootstrap", ">= 4.3.1"
+gem 'popper_js', '~> 1.14.5'
+gem "bootstrap"
 gem 'simple_form'
 
 source 'https://rails-assets.org' do
